@@ -60,6 +60,18 @@ Tasks are saved in CSV format:
 
 <img width="498" height="79" alt="image" src="https://github.com/user-attachments/assets/7b4bd6c6-f542-4fc2-b22e-5638a62f8944" />
 
+## 📋 Documentaion
+
+A full documentation can be generate with the help of Doxygen;
+
+### To do so:
+
+1. Install Doxygen
+2. At the root of the project, execute `doxygen Doxyfile`
+3. Go to the folder `docs/html`
+4. `open index.html` for MacOs, `start index.html` for Windows and `xdg-open` for Linux
+
+
 ## 🔧 Development
 
 ### Code Structure
@@ -76,4 +88,3 @@ Tasks are saved in CSV format:
 - Implement new functionality in src/ directory
 - Update the main menu in main.cpp if needed
 - Rebuild and test thoroughly
-
