@@ -130,6 +130,11 @@ void TaskManager::displayCompletedTasks() const {
     }
 }
 
+/**
+ * Sorts tasks by priority in descending order (HIGH > MEDIUM > LOW)
+ * Uses a lambda function to compare priority values cast to integers
+ * Higher numeric priority values (HIGH=2, MEDIUM=1, LOW=0) come first
+ */
 void TaskManager::sortByPriority() {
     std::sort(tasks.begin(), tasks.end(), 
         [](const auto& a, const auto& b) {
@@ -137,6 +142,11 @@ void TaskManager::sortByPriority() {
         });
 }
 
+/**
+ * Sorts tasks by creation time in ascending order (oldest first)
+ * Uses the system_clock::time_point comparison to order chronologically
+ * Earlier creation times appear before later ones in the sorted list
+ */
 void TaskManager::sortByCreationTime() {
     std::sort(tasks.begin(), tasks.end(), 
         [](const auto& a, const auto& b) {
@@ -144,6 +154,11 @@ void TaskManager::sortByCreationTime() {
         });
 }
 
+/**
+ * Sorts tasks by completion status, placing incomplete tasks first
+ * Incomplete tasks (false) come before completed tasks (true) in the sorted list
+ * Uses boolean comparison where false < true
+ */
 void TaskManager::sortByCompletionStatus() {
     std::sort(tasks.begin(), tasks.end(), 
         [](const auto& a, const auto& b) {

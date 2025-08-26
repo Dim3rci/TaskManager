@@ -31,6 +31,8 @@ bool FileHandler::loadFromFile(TaskManager& taskManager, const std::string& file
     TaskManager newTaskManager;
     
     std::string line;
+
+    // Parse through CSV file
     while (std::getline(inFile, line)) {
         size_t pos1 = line.find(',');
         size_t pos2 = line.find(',', pos1 + 1);
