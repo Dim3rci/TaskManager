@@ -1,0 +1,4 @@
+/-p
+.vscode
+*.exe
+*.o
